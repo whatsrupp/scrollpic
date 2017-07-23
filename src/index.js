@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import App from './components/app';
-import reducers from './reducers';
+import BackArrow from './components/back_arrow'
+import NextArrow from './components/next_arrow'
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render(){
+    return(
+      <div>
+        <BackArrow />
+        <NextArrow />
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<App />, document.querySelector('.container'))
