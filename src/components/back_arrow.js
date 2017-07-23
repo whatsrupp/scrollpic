@@ -18,7 +18,11 @@ class BackArrow extends Component {
 
     if(this.state.active){
       return(
-        <img src={require('../images/arrows/back.png')} />
+        <img
+          src={require('../images/arrows/back.png')}
+          onClick = { () => this.props.onArrowClick() }
+          className = 'arrow'
+        />
       )
     } else {
       return(

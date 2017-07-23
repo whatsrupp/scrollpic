@@ -7,7 +7,7 @@ class NextArrow extends Component {
     super(props);
 
     this.state = {
-      active: false
+      active: true
     }
   }
 
@@ -15,7 +15,11 @@ class NextArrow extends Component {
 
     if (this.state.active){
       return (
-        <img src={require('../images/arrows/next.png')} />
+        <img
+          src={require('../images/arrows/next.png')}
+          onClick={ () => this.props.onArrowClick() }
+          className = 'arrow'
+         />
       )
     } else {
       return (

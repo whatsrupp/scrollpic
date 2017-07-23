@@ -9,7 +9,7 @@ class ImageDisplay extends Component {
   render () {
     return(
       <img
-        src='http://weknowyourdreams.com/images/bear/bear-05.jpg'
+        src={ this.props.activePicture }
         className='main-image'
       />
     )
