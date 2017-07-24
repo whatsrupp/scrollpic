@@ -42,7 +42,7 @@ class App extends Component {
       this.setState({activePicture: this.state.pictures[this.currentPictureIndex()+1]})
     }
   }
-  
+
   decrementPicture(){
     const maxIndex = this.state.pictures.length - 1
 
@@ -59,18 +59,27 @@ class App extends Component {
     return(
       <div>
 
-        <BackArrow
-          onArrowClick={() => this.decrementPicture()}
-        />
+        <h1>Scroll Pic </h1>
 
-        <ImageDisplay
-          activePicture={this.state.activePicture}
-         />
+        <div className='container-fluid vertical-align'>
+          <div className='col-lg-3'>
+            <BackArrow
+            onArrowClick={() => this.decrementPicture()}
+            />
+          </div>
 
-        <NextArrow
-          onArrowClick={() => this.incrementPicture()}
-        />
+          <div className='col-lg-6 picture-container'>
+            <ImageDisplay
+            activePicture={this.state.activePicture}
+            />
+          </div>
 
+          <div className='col-lg-3'>
+            <NextArrow
+            onArrowClick={() => this.incrementPicture()}
+            />
+          </div>
+        </div>
       </div>
     )
   }

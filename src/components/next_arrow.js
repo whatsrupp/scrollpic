@@ -18,7 +18,7 @@ class NextArrow extends Component {
         <img
           src={require('../images/arrows/next.png')}
           onClick={ () => this.props.onArrowClick() }
-          className = 'arrow'
+          className = 'arrow img-responsive center-block'
          />
       )
     } else {

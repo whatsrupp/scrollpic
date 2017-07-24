@@ -1,8 +1,28 @@
 .main-image{
-  height: 300px;
+  width: 100%;
+  border-radius: 5px;
 }
 
+.picture-container {
+  overflow: hidden;
+  height: 400px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
 
 .arrow:hover{
   cursor:pointer;
 }
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+html{
+  margin-top: 50px;
+}
+/*html, body {
+  background-color: #676087;
+}*/
